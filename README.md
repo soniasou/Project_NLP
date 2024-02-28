@@ -26,4 +26,4 @@ This technique consists in representing a document as an unordered set of words,
 
 - Extracting embeddings from text: Transform text into a numerical vector, then use the CounVectorizer method to transform text into a vector.  The vector is then reshaped to have a fixed length of 1000.
 
-- 
+## Glove Technique
