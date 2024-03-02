@@ -24,27 +24,18 @@ This technique consists in representing a document as an unordered set of words,
 
 - Creating a list of processed stop words. 
 
-- Extracting embeddings from text: Transform text into a numerical vector, then use the CounVectorizer method to transform text into a vector.  The vector is then reshaped to have a fixed length of 1000. The dataset 'movies_data' in the Drive link contains the column of 'embeddings_bag_of_words' for this method. Here is the link to the database:
-  
-https://drive.google.com/file/d/1fih6eesBm8_DPSYn1X31-kesEyHEbdH6/view?usp=drive_link
-
-The next step is then generating the annoy index 'index.ann':
-
-https://drive.google.com/file/d/1eumdZ-4BUsgVfMK0jw98PRJeC2hgfQR_/view?usp=drive_link
-
+- Extracting embeddings from text: Transform text into a numerical vector, then use the CounVectorizer method to transform text into a vector.  The vector is then reshaped to have a fixed length of 1000. The dataset 'movies_data' in the Drive link contains the column of 'embeddings_bag_of_words' for this method. The next step is then generating the annoy index 'index.ann'.
 ## Glove Technique
 
 The glove technique aims to capture the semantic meaning of words by representing them as vectors in a vector space of fixed dimensions. The 'glove' embedding calculation function consists of several steps: 
 
-- Loading pre-trained GloVe word embeddings using the gensim library. It converts the GloVe format to the Word2Vec format, and then loads the embeddings into a KeyedVectors model.For this purpose, we use the following file 'glove.6B.100d.txt':
-
-https://drive.google.com/file/d/1Y2p5dtqRW6WK0CBAIHicrEaMFWBwePsf/view?usp=drive_link
+- Loading pre-trained GloVe word embeddings using the gensim library. It converts the GloVe format to the Word2Vec format, and then loads the embeddings into a KeyedVectors model.For this purpose, we use the following file 'glove.6B.100d.txt'. 
 
 - Computing text embedding by converting the text into lowercase words, retrieving the embeddings for each word from the GloVe model, and then calculating the average of these embeddings to obtain a single vector representation for the entire text. Vectors generated are of length 100. The same dataset contains the column of 'embeddings_glove' for this method.
 
-The next step is then generating the annoy index 'index_1.ann':
+Here's the link to the database containing the original database with both columns: column 1 for bag of word embeddings and column 2 for glove embeddings, index and index_1 for both techniques and finally the 'glove.6B.100d.txt' file used:
 
-https://drive.google.com/file/d/1tI2DIdsVKqrI-7DsXGHvZSLw06hzjqfg/view?usp=drive_link
+https://drive.google.com/file/d/1BOXsqShoOTaL_hAupJKyIWOF3iOLRA-I/view?usp=drive_link
 
 ## Running project
 
